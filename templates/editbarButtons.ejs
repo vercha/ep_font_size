@@ -1,0 +1,139 @@
+<li class="separator acl-write"></li>
+<div>
+<!-- <li class="acl-write font-size-icon ep_font_size">
+  <a title="Font Size">
+    <span class="buttonicon"></span>
+  </a>
+</li> -->
+<!-- <li id="font-size" class="acl-write">
+    <select class="size-selection" data-l10n-id="font_size.title">
+        <option value="dummy" selected data-l10n-id="ep_font_size.size">Size</option>
+        <option value="fs8">8</option>
+        <option value="fs9">9</option>
+        <option value="fs10">10</option>
+        <option value="fs11">11</option>
+        <option value="fs12">12</option>
+        <option value="fs13">13</option>
+        <option value="fs14">14</option>
+        <option value="fs15">15</option>
+        <option value="fs16">16</option>
+        <option value="fs17">17</option>
+        <option value="fs18">18</option>
+        <option value="fs19">19</option>
+        <option value="fs20">20</option>
+    </select>
+</li> -->
+<li id="font-size" class="acl-write" data-l10n-id="font_size.title">
+   <span value="dummy" data-l10n-id="ep_font_size.size" id='font_size_dummy'></span>
+   <!-- <ul class="size-selection" style="display:none"> -->
+   <ul class="size-selection">
+       <li data-value="fs8" style="font-size: 8px">8</li>
+       <li data-value="fs9" style="font-size: 9px">9</li>
+       <li data-value="fs10" style="font-size: 10px">10</li>
+       <li data-value="fs11" style="font-size: 11px">11</li>
+       <li data-value="fs12" style="font-size: 12px">12</li>
+       <li data-value="fs13" style="font-size: 13px">13</li>
+       <li data-value="fs14" style="font-size: 14px">14</li>
+       <li data-value="fs15" style="font-size: 15px">15</li>
+       <li data-value="fs16" style="font-size: 16px">16</li>
+       <li data-value="fs17" style="font-size: 17px">17</li>
+       <li data-value="fs18" style="font-size: 18px">18</li>
+       <li data-value="fs19" style="font-size: 19px">19</li>
+       <li data-value="fs20" style="font-size: 20px">20</li>
+   </ul>
+</li>
+</div>
+
+<style>
+/*#font-size {
+  margin-left: 12px;
+  margin-right: 5px;
+}
+.toolbar ul li select.size-selection {
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAH0lEQVR42mNgoDnQ13f7TwiTpIkkm0hyHkl+YhhQAABcfyjsqSyTLgAAAABJRU5ErkJggg==") no-repeat scroll right center transparent;
+    padding-right: 14px;
+    width: 75px;
+}
+.toolbar ul li select.size-selection:hover {
+    background-color: #cff3de;
+}
+.toolbar ul li select.size-selection option {
+    background-color: white;
+    color: #333;
+    font-size: 12px;
+}
+.ep_font_size {
+  font-size:font-awesome;
+}
+.ep_font_size > a > .buttonicon:before{
+  content:"\e81f";
+  top: 2px !important;
+}
+.size-selection{
+  margin-left:-3px;
+  border-radius: 0 3px 3px 0 !important;
+}*/
+
+
+#font-size{
+  height: 36px;
+  position: relative;
+  overflow: visible;
+  width: 70px;
+  cursor: default;
+  margin-left: 6px;
+  margin-right: 10px;
+}
+#font-size span {
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  width: 100%;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAH0lEQVR42mNgoDnQ13f7TwiTpIkkm0hyHkl+YhhQAABcfyjsqSyTLgAAAABJRU5ErkJggg==") no-repeat scroll right center transparent;
+  padding-left: 5px;
+  font-size: 12px;
+}
+#font-size span:hover {
+  background-color: #cff3de;
+}
+/*TODO: li hover时，选择列表才出现在视线中*/
+#font-size ul.size-selection {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 68px;
+  /*height: 254px;*/
+  background-color: #fff;
+  box-shadow: 1px 1px 21px rgb(227,228,231);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+#font-size:hover ul.size-selection {
+  left: 0px;
+  top: 36px;
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+.size-selection li {
+  /*float: none !important;*/
+  background: none;
+  width: 100%;
+  height: 28px !important;
+  text-align: center;
+  line-height: 28px;
+}
+.size-selection li:hover, .size-selection li:focus {
+    outline: none;
+    background-color: #cff3de;
+}
+</style>
